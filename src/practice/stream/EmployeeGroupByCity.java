@@ -15,7 +15,7 @@ public class EmployeeGroupByCity {
         employee1List.add(new Employee1("C","Pune"));
         employee1List.add(new Employee1("D","Pune"));
         employee1List.add(new Employee1("E","Hyderabad"));
-        employee1List.add(new Employee1("F","Benglore"));
+        employee1List.add(new Employee1("F","Bangalore"));
 
         Map<String, List<Employee1>> stringListMap = employee1List.stream().collect(Collectors.groupingBy(Employee1::getCity));
         System.out.println(stringListMap);
