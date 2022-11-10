@@ -1,6 +1,5 @@
 package practice.stream;
 
-import javax.sound.midi.Soundbank;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,17 +22,26 @@ public class ProductCategoryBookPrice {
         List<Product> productList = Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10);
 
         System.out.println("----Products with Category Book and Price greater than 100----");
-        List<Product> bookList = productList.stream().filter(p -> p.getpCategory().equalsIgnoreCase("Book")).filter(price -> price.getPrice() > 100).collect(Collectors.toList());
+        List<Product> bookList = productList.stream()
+                .filter(p -> p.getpCategory().equalsIgnoreCase("Book"))
+                .filter(price -> price.getPrice() > 100)
+                .collect(Collectors.toList());
         bookList.forEach(System.out::println);
 
         // Exercise 2 — Obtain a list of order with products belong to category “Beauty”
         System.out.println("----Products with Category Beauty----");
-        List<Product> beautyList = productList.stream().filter(p -> p.getpCategory().equalsIgnoreCase("Beauty")).collect(Collectors.toList());
+        List<Product> beautyList = productList.stream()
+                .filter(p -> p.getpCategory()
+                        .equalsIgnoreCase("Beauty"))
+                .collect(Collectors.toList());
         beautyList.forEach(System.out::println);
 
         // Exercise 3 — Obtain a list of product with category = “Toys” and then apply 10% discount
         System.out.println("----Products with Category Toy and Applying 10% Discount----");
-        List<Double> toyList = productList.stream().filter(t -> t.getpCategory().equalsIgnoreCase("Toy")).map(d -> d.getPrice() * 0.9).collect(Collectors.toList());
+        List<Double> toyList = productList.stream()
+                .filter(t -> t.getpCategory().equalsIgnoreCase("Toy"))
+                .map(d -> d.getPrice() * 0.9)
+                .collect(Collectors.toList());
         toyList.forEach(System.out::println);
 
         
