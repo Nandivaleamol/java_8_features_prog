@@ -11,5 +11,6 @@ public class FindingStartingNums {
         List<Integer> myList = Arrays.asList(10,15,8,49,25,18,98,32);
 
         myList.stream().map(s->s+"").filter(s->s.startsWith("1")).forEach(System.out::println);
+
     }
 }
