@@ -14,7 +14,7 @@ public class StreamImpForEachLoop {
         System.out.println("-------------square of list------------");
         List<Integer> numberList= Arrays.asList(1,3,5,6,2,8,5,4,9);
 
-        List<Integer> squareList = numberList.stream().map(n -> n * n).distinct().collect(Collectors.toList());
+        List<Integer> squareList = numberList.stream().map(n -> n * n).distinct().toList();
         squareList.forEach(System.out::println);
 
         System.out.println("--------------filter()--------------");
