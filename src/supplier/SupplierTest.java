@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 
 public class SupplierTest {
     public static void main(String[] args) {
-        Supplier<Date> s = ()->new Date();
+        Supplier<Date> s = Date::new;
         System.out.println(s.get());
         System.out.println(s.get());
         System.out.println(s.get());

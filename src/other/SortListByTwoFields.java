@@ -20,7 +20,7 @@ public class SortListByTwoFields {
 
        //sorting by book pages
         System.out.println("--------Sorting by book pages--------");
-        bookList.stream().sorted((book1,book2)->book1.getPages().compareTo(book2.getPages())).forEach(book -> System.out.println(book));
+        bookList.stream().sorted(Comparator.comparing(Book::getPages)).forEach(System.out::println);
 
         // Create Comparators for Name, Author & Cost fields respectively
         System.out.println("\nSort list of book objects by name then by author then by cost");

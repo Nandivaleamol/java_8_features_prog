@@ -13,5 +13,13 @@ public class OddNumbers {
                 System.out.println(i1);
             }
         }
+
+
+        System.out.println("=====================");
+        for (int a : arr){
+            if (a%2!=0){
+                System.out.println(a);
+            }
+        }
     }
 }
