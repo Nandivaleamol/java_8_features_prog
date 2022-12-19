@@ -13,20 +13,20 @@ public class MergeListAndOper {
         List<Integer> list2 = Arrays.asList(4,5,6,7,8,9);
 
         //merging to lists in single list(concatenation)
-        var fullList = Stream.concat(list1.stream(), list2.stream());
+         Stream<Integer> fullList = Stream.concat(list1.stream(), list2.stream());
 
-        var allElements = fullList.toList();
+        List<Integer> allElements = fullList.toList();
         System.out.println("Merged List:");
         System.out.println(allElements);
 
         //getting unique elements
-        var uniqueElements = new HashSet<>(allElements);
+        HashSet<Integer> uniqueElements = new HashSet<Integer>(allElements);
         System.out.println(uniqueElements);
 
-        var min = uniqueElements.stream().min((x1, x2) -> x1 - x2).get();
+        Integer min = uniqueElements.stream().min((x1, x2) -> x1 - x2).get();
         System.out.println(min);
 
-        var max = uniqueElements.stream().max((x1, x2) -> x1 - x2).get();
+        Integer max = uniqueElements.stream().max((x1, x2) -> x1 - x2).get();
         System.out.println(max);
 
 
