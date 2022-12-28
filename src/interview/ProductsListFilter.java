@@ -78,10 +78,7 @@ public class ProductsListFilter {
         Product p8 = new Product(108, "HP","Laptop",50000);
 
         List<Product> products = Arrays.asList(p1,p2,p3,p4,p5,p6,p7,p8);
-
-        List<Product> listOfProducts = products.stream().filter(p -> p.getCategory().equals("Books") && p.getPrice()>200).collect(Collectors.toList());
-
-        listOfProducts.forEach(System.out::println);
+         products.stream().filter(p -> p.getCategory().equals("Books") && p.getPrice()>200).forEach(System.out::println);
 
     }
 
