@@ -9,15 +9,15 @@ public class StreamSort {
 
     //natural sorting using stream api
     public void sortNaturallyUsingStream(){
-        var alphabets = Arrays.asList("A", "F", "G", "j", "R", "C");
-        var sortedAlphabets = alphabets.stream().sorted().toList();
+        List<String> alphabets = Arrays.asList("A", "F", "G", "j", "R", "C");
+        List<String> sortedAlphabets = alphabets.stream().sorted().collect(Collectors.toList());
         sortedAlphabets.forEach(System.out::println);
     }
 
     //sort Naturally In Reverse  OrderUsing Stream api
     public void sortNaturallyInReverseOrderUsingStream(){
-        var alphabets = Arrays.asList("A", "F", "G", "j", "R", "C");
-        var alphabetsReverseSorting = alphabets.stream().sorted(Comparator.reverseOrder()).toList();
+        List<String> alphabets = Arrays.asList("A", "F", "G", "j", "R", "C");
+        List<String> alphabetsReverseSorting = alphabets.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
         alphabetsReverseSorting.forEach(System.out::println);
     }
 

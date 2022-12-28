@@ -15,7 +15,7 @@ public class SortListByTwoFields {
 
         //sorted by book names
         System.out.println("--------Sorting by book names--------");
-       bookList.stream().sorted((book1, book2) -> book1.getName().compareTo(book2.getName())).toList().forEach(System.out::println);
+       bookList.stream().sorted((book1, book2) -> book1.getName().compareTo(book2.getName())).forEach(System.out::println);
 
        //sorting by book pages
         System.out.println("--------Sorting by book pages--------");

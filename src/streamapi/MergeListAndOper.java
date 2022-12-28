@@ -15,7 +15,7 @@ public class MergeListAndOper {
         //merging to lists in single list(concatenation)
          Stream<Integer> fullList = Stream.concat(list1.stream(), list2.stream());
 
-        List<Integer> allElements = fullList.toList();
+        List<Integer> allElements = fullList.collect(Collectors.toList());
         System.out.println("Merged List:");
         System.out.println(allElements);
 
