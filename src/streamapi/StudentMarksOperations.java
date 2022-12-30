@@ -25,7 +25,7 @@ public class StudentMarksOperations {
         System.out.println("Total Failed Students : "+count);
 
         // counting how many students are passed
-        long count1 = marks.stream().filter(i -> i >= 35).collect(Collectors.toList()).stream().count();
+        long count1 = marks.stream().filter(i -> i >= 35).count();
         System.out.println("Total Pass Students : "+count1);
 
         // adding 5 grace marks who failed...

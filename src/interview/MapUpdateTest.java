@@ -12,7 +12,7 @@ public class MapUpdateTest{
         map.put("PK", "Pakistan");
         map.put("UK", "United Kingdom");
 
-        map.entrySet().stream().forEach(System.out::println);
+        map.entrySet().forEach(System.out::println);
 
         map.computeIfPresent("USA", (key, value) -> "United States");
 
