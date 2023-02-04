@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 // Problem Statement: Write a java program to group the words by length using java 8 features
 public class GroupsByWordsLength {
-    public static void main(String[] args) {
+     static public void main(String[] args) {
 
         String str = "i have a sentence with technical words";
 
