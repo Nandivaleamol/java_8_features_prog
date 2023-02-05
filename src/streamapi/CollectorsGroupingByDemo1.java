@@ -1,6 +1,7 @@
 package streamapi;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -32,6 +33,14 @@ public class CollectorsGroupingByDemo1 {
             System.out.println(age);
             System.out.println(persons);
         });
+
+        System.out.println("-------Sort Person By Age in Descending Order--------");
+        List<Person> sortedList = personList.stream().sorted((e1, e2) -> e2.getAge() - e1.getAge()).collect(Collectors.toList());
+        System.out.println(sortedList);
+
+        System.out.println("-------Sort Person By Age in natural default sorting order--------");
+        List<Person> collect = personList.stream().sorted(Comparator.comparingInt(Person::getAge)).collect(Collectors.toList());
+        System.out.println(collect);
     }
 }
 
