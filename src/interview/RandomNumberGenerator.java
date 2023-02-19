@@ -13,7 +13,7 @@ public class RandomNumberGenerator {
 
         Random random = new Random();
 
-        random.ints(1,100).limit(n).forEach(System.out::println);
+        random.ints(1,999999).limit(n).forEach(System.out::println);
     }
 
 }
